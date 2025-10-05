@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors'); // << Add this
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS for all routes
+app.use(cors()); // << Add this
 
 // Serve static files from 'public'
 app.use(express.static(path.join(__dirname, 'public')));
