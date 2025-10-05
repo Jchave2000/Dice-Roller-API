@@ -14,7 +14,7 @@
 
         rollButton.addEventListener('click', async () => {
             try {
-                const response = await fetch('/roll');
+                const response = await fetch('https://ashy-island-0a531370f.2.azurestaticapps.net//roll');
                 const data = await response.json();
                 resultsSpan.textContent = data.dice.join(', ');
             } catch (error) {
